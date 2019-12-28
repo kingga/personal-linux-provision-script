@@ -113,7 +113,7 @@ rm ./gitkraken-installer.deb
 
 ## WPS Office
 wget http://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/8865/wps-office_11.1.0.8865_amd64.deb -O wps-installer.deb
-sudo apt install ./wps-installer.deb
+sudo apt install -y ./wps-installer.deb
 rm ./wps-installer.deb
 
 ## Colour Picker
@@ -121,7 +121,7 @@ sudo apt-get install -y yad
 
 ## KeeWeb
 wget https://github.com/keeweb/keeweb/releases/download/v1.12.3/KeeWeb-1.12.3.linux.x64.deb -O ./keeweb-installer.deb
-sudo apt install ./keeweb-installer.deb
+sudo apt install -y ./keeweb-installer.deb
 rm ./keeweb-installer.deb
 
 ## Lightshot
