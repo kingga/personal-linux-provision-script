@@ -22,7 +22,7 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 
 # VS Code
-wget https://go.microsoft.com/fwlink/?LinkID=760868 -O vscode-installer.deb
+wget https://go.microsoft.com/fwlink/?LinkID=760868 -O vscode-installer.deb -4
 sudo apt install -y ./vscode-installer.deb
 rm vscode-installer.deb
 
