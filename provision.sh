@@ -21,6 +21,9 @@ ssh-keygen -t rsa -b 4096 -C "contact@isaacskelton.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 
+# VIM
+sudo apt-get install -y vim
+
 # VS Code
 wget https://go.microsoft.com/fwlink/?LinkID=760868 -O vscode-installer.deb -4
 sudo apt install -y ./vscode-installer.deb
@@ -66,6 +69,18 @@ sudo mysql -u root
 wget https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community_8.0.18-1ubuntu19.10_amd64.deb -O mysql-workbench.deb
 sudo apt install -y ./mysql-workbench.deb
 rm ./mysql-workbench.deb
+
+# Postgresql
+sudo apt install -y postgresql postgresql-contrib
+
+# Redis
+sudo apt-get install -y redis-server
+sudo systemctl enable redis-server.service
+sudo apt-get install -y php7.3-redis
+
+sudo echo 'maxmemory 256mb' >> /etc/redis/redis.conf
+sudo echo 'maxmemory-policy allkeys-lru' >> /etc/redis/redis.conf
+sudo systemctl restart redis-server.service
 
 # Wine
 sudo apt install -y --install-recommends winehq-staging winetricks
@@ -137,9 +152,6 @@ sudo gpasswd -a isaacske plugdev
 
 ## VLC
 sudo snap install vlc
-
-## VIM
-sudo apt-get install -y vim
 
 # NPM / Yarn Packages
 ## Vue CLI
